@@ -23,17 +23,27 @@ public class Eksempel7 {
 		
 		//a) Skrive ut alle partall i området [1,10>
 		System.out.println("\n\nAlle partall i området [1,10>");
-		
+		IntSteam.range(1,10).filter(x  -> x%2 == 0).forEach(x -> System.out.print(x + " "));
+
 		//b) Skrive ut kvadratet av alle tallene området [1,10>
 		System.out.println("\n\nKvadratet av alle tallene området [1,10>");
+		IntSteam.range(1,10).map(x  -> x*x).forEach(x -> System.out.print(x + " "));
 		
 		//c) For en strøm av tallene 100, 103, 106, 109, ...
 		//   skriv ut de 10 første som er delelig med 4
 		System.out.println("\n\nDe 10 første i (100, 103, 106, ...) som er delelig med 4");
-		
+		IntSteam.iterate(100, x -> x+3)
+			.filter(x  -> x%4 == 0)
+			.limit(10)
+			.forEach( x -> System.out.print(x + " "));
+
 		//d) For en stream av strenger, samle dem opp i en ny string, sortert
 		//og uten duplikater. Skriv deretter ut resultatet.
 		System.out.println("\n\nSorterte strenger uten duplikater");
+		String res = Stream.of("X", "A", "B", "A", "B", "F")
+			.distinct()
+			.sorted()
+			.collect(Collectors.joining(" "));
 //		System.out.println(resultat);
 		
 		//e) For en stream av strenger, samle dem sortert på stringlengde, 
