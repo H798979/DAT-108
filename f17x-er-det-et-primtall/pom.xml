@@ -11,7 +11,7 @@
 	</parent>
 
 	<groupId>no.hvl.dat108</groupId>
-	<artifactId>f17b-primtall</artifactId>
+	<artifactId>f17x-er-det-et-primtall</artifactId>
 
 	<properties>
 		<java.version>17</java.version>

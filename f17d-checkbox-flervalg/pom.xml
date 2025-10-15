@@ -9,7 +9,7 @@
 	</parent>
 
 	<groupId>no.hvl.dat108</groupId>
-	<artifactId>f17c-hiddenparameter</artifactId>
+	<artifactId>f17d-checkbox-flervalg</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
